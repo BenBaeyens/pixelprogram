@@ -16,6 +16,10 @@ public class CanvasGenerator : MonoBehaviour
 
     #region Methods
 
+    private void Start() {
+        xSizeIF.text = "10";
+        ySizeIF.text = "10";
+    }
     public void GenerateCanvas(){
         Debug.Log(xSizeIF.text + " x " + ySizeIF.text);
         int xSize = int.Parse(xSizeIF.text);
