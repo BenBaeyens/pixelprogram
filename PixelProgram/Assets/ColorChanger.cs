@@ -12,7 +12,7 @@ public class ColorChanger : MonoBehaviour
     #region Methods
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKey(KeyCode.Space)){
             selectorController.floorObject.GetComponent<Renderer>().material = effectedMat; 
         }   
     }
