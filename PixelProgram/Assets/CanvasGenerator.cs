@@ -17,6 +17,7 @@ public class CanvasGenerator : MonoBehaviour
     #region Methods
 
     public void GenerateCanvas(){
+        Debug.Log(xSizeIF.text + " x " + ySizeIF.text);
         int xSize = int.Parse(xSizeIF.text);
         int ySize = int.Parse(ySizeIF.text);
 
@@ -25,15 +26,14 @@ public class CanvasGenerator : MonoBehaviour
 
         for (int i = 0; i < xSize; i++)
         {
-            Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity);
+            yPos = 0;
+            for (int b = 0; b < ySize; b++)
+            {
+                Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity);
+                yPos += 6;
+            }
             xPos += 6;
         }   
-
-        for (int i = 0; i < ySize; i++)
-        {
-            Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity);
-            yPos += 6;
-        }
 
         gameObject.SetActive(false);
 
