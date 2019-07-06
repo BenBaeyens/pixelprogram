@@ -7,7 +7,9 @@ public class ColorPicker : MonoBehaviour
 
     ColorChanger colorChanger;
 
-    Material[] colors;
+    [SerializeField] MenuController menuController;
+
+    [SerializeField] Material[] colors;
 
     #region Methods
 
@@ -17,6 +19,7 @@ public class ColorPicker : MonoBehaviour
     }
 
     public void PickColor(string color){
+        menuController.MenuClose();
         switch(color){
             case "White":
                 colorChanger.effectedMat = colors[0];
@@ -34,6 +37,7 @@ public class ColorPicker : MonoBehaviour
         }
 
     }
+
 
     #endregion
 }
