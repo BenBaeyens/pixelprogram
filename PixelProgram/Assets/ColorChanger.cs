@@ -9,11 +9,14 @@ public class ColorChanger : MonoBehaviour
     [SerializeField] public Material effectedMat;
     [SerializeField] SelectorController selectorController;
 
+    [SerializeField] ColorUndo colorUndo;
+
     #region Methods
 
     private void Update() {
         if(Input.GetKey(KeyCode.Space)){
             selectorController.floorObject.GetComponent<Renderer>().material = effectedMat; 
+            colorUndo.UndoColor();
         }   
     }
 
