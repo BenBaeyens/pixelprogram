@@ -374,7 +374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282840810}
   m_LocalRotation: {x: 0.7071068, y: 0.000000007450581, z: -0.000000007450581, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 23.06, z: -0.039}
+  m_LocalPosition: {x: 0, y: 23.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -650,11 +650,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2048449565}
     m_Modifications:
-    - target: {fileID: 7328187936655544429, guid: 6681c7185dff33145a8fb51f25c53f91,
-        type: 3}
-      propertyPath: m_Name
-      value: Platform
-      objectReference: {fileID: 0}
     - target: {fileID: 7328187936655544433, guid: 6681c7185dff33145a8fb51f25c53f91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,6 +705,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7328187936655544429, guid: 6681c7185dff33145a8fb51f25c53f91,
+        type: 3}
+      propertyPath: m_Name
+      value: Pixel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6681c7185dff33145a8fb51f25c53f91, type: 3}
 --- !u!1 &958746956
@@ -744,10 +744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4a43fa013566c4aa11863598cab527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 7328187936655544429, guid: 6681c7185dff33145a8fb51f25c53f91,
-    type: 3}
+  pixel: {fileID: 7328187936655544429, guid: 6681c7185dff33145a8fb51f25c53f91, type: 3}
   selector: {fileID: 1729182189833829739, guid: f72e9d41590c8fa479e499a385b3c136,
     type: 3}
+  pixelParent: {fileID: 2048449564}
   xSizeIF: {fileID: 1642943037}
   ySizeIF: {fileID: 1882490433}
 --- !u!114 &958746958
@@ -2018,7 +2018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048449565}
   m_Layer: 0
-  m_Name: Platforms
+  m_Name: Pixels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

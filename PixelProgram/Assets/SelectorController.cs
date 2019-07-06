@@ -73,7 +73,7 @@ public class SelectorController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(collisionDetection.transform.position, -Vector3.up, out hit, 1.1f))
         {
-            if (hit.transform.name.Contains("Platform"))
+            if (hit.transform.name.Contains("Pixel"))
             {
                 MoveCollisionDetectionObject(s, "Back");
                 floorObject = hit.transform.gameObject;
