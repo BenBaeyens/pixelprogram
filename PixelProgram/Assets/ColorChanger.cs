@@ -16,7 +16,8 @@ public class ColorChanger : MonoBehaviour
     private void Update() {
         if(Input.GetKey(KeyCode.Space)){
             selectorController.floorObject.GetComponent<Renderer>().material = effectedMat; 
-            colorUndo.UndoColor();
+            colorUndo = selectorController.floorObject.GetComponent<ColorUndo>();
+            colorUndo.AddColor();
         }   
     }
 
