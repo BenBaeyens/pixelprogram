@@ -6,7 +6,7 @@ public class ColorChanger : MonoBehaviour
 {
 
     [SerializeField] Material defaultMat;
-    [SerializeField] Material effectedMat;
+    [SerializeField] public Material effectedMat;
     [SerializeField] SelectorController selectorController;
 
     #region Methods
