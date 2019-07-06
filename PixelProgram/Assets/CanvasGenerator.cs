@@ -7,6 +7,7 @@ public class CanvasGenerator : MonoBehaviour
 
     [SerializeField] GameObject platform;
     [SerializeField] GameObject selector;
+    [SerializeField] GameObject platformParent;
 
 
     [SerializeField] TMP_InputField xSizeIF;
@@ -33,7 +34,7 @@ public class CanvasGenerator : MonoBehaviour
             yPos = 0;
             for (int b = 0; b < ySize; b++)
             {
-                Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity);
+                Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity, platformParent.transform);
                 yPos += 6;
             }
             xPos += 6;
