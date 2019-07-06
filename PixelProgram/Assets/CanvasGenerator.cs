@@ -5,9 +5,9 @@ using TMPro;
 public class CanvasGenerator : MonoBehaviour
 {
 
-    [SerializeField] GameObject platform;
+    [SerializeField] GameObject pixel;
     [SerializeField] GameObject selector;
-    [SerializeField] GameObject platformParent;
+    [SerializeField] GameObject pixelParent;
 
 
     [SerializeField] TMP_InputField xSizeIF;
@@ -34,7 +34,7 @@ public class CanvasGenerator : MonoBehaviour
             yPos = 0;
             for (int b = 0; b < ySize; b++)
             {
-                Instantiate(platform, new Vector3(xPos, 0, yPos), Quaternion.identity, platformParent.transform);
+                Instantiate(pixel, new Vector3(xPos, 0, yPos), Quaternion.identity, pixelParent.transform);
                 yPos += 6;
             }
             xPos += 6;
