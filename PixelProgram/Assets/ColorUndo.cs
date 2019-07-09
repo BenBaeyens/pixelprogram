@@ -12,6 +12,7 @@ public class ColorUndo : MonoBehaviour
     void Start()
     {
         materialHistory = new List<Material>();
+        materialHistory.Add(GetComponent<Renderer>().material);
     }
 
     void Update(){
