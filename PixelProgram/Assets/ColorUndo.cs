@@ -31,8 +31,8 @@ public class ColorUndo : MonoBehaviour
     }
 
     public void UndoColor(){
-        materialHistory.RemoveAt(materialHistory.Count - 1);
-        gameObject.GetComponent<Renderer>().material = materialHistory[materialHistory.Count - 1];
+        materialHistory.RemoveAt(0);
+        gameObject.GetComponent<Renderer>().material = materialHistory[0];
     }
     #endregion
 }
