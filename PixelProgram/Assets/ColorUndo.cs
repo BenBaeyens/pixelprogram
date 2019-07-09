@@ -14,17 +14,19 @@ public class ColorUndo : MonoBehaviour
         materialHistory = new List<Material>();
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.U)){
+            AddColor();
+        }
+    }
+
     public void AddColor(){
-        int counter;
         Debug.Log(materialHistory.Count);
         materialHistory.Insert(0, gameObject.GetComponent<Renderer>().material);
         Debug.Log(materialHistory.Count);
-        counter = materialHistory.Count;
-        if(counter >= 2){
-            Debug.Log("yeet");
-            // if(materialHistory[0] == materialHistory[1]){
-            //     Debug.Log("yeet2");
-            //     materialHistory.RemoveAt(0);}
+        if(materialHistory.Count >= 2){
+            if(materialHistory[0].name == materialHistory[1].name){
+                materialHistory.RemoveAt(0);}
             }
     }
 
