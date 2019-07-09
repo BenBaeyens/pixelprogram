@@ -23,7 +23,6 @@ public class ColorChanger : MonoBehaviour
             selectorController.floorObject.GetComponent<Renderer>().material = effectedMat; 
             colorUndo = selectorController.floorObject.GetComponent<ColorUndo>();
             colorUndo.AddColor();
-            pixelHistory.Add(selectorController.floorObject);
         }   
 
         if(Input.GetKeyDown(KeyCode.U)){

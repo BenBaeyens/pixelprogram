@@ -6,20 +6,17 @@ public class ColorUndo : MonoBehaviour
 {
 
     public List<Material> materialHistory;
+    ColorChanger colorChanger;
 
     #region Methods
 
     void Start()
-    {
+    {   
+        colorChanger = GameObject.Find("Selector").GetComponent<ColorChanger>();
         materialHistory = new List<Material>();
         materialHistory.Add(GetComponent<Renderer>().material);
     }
 
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.U)){
-            AddColor();
-        }
-    }
 
     public void AddColor(){
         Debug.Log(materialHistory.Count);
@@ -27,8 +24,14 @@ public class ColorUndo : MonoBehaviour
         Debug.Log(materialHistory.Count);
         if(materialHistory.Count >= 2){
             if(materialHistory[0].name == materialHistory[1].name){
-                materialHistory.RemoveAt(0);}
+                materialHistory.RemoveAt(0);
             }
+            else{
+               
+                colorChanger.pixelHistory.Add(gameObject);
+            }
+        }
+    
     }
 
     public void UndoColor(){
