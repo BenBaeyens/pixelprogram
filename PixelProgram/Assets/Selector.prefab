@@ -286,6 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729182189833829736}
   - component: {fileID: 3649379174774307301}
+  - component: {fileID: 6204548464179644735}
   m_Layer: 0
   m_Name: Selector
   m_TagString: Untagged
@@ -326,6 +327,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpDistance: 6
   floorObject: {fileID: 0}
+--- !u!114 &6204548464179644735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729182189833829739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5aaa45eb5aa9a1478a3c00a66adf4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMat: {fileID: 2100000, guid: 4a3e1517f8c1f53459d6f7ba3799f716, type: 2}
+  effectedMat: {fileID: 2100000, guid: 8dd4491df985cdf4290ea9cb348541ee, type: 2}
+  selectorController: {fileID: 3649379174774307301}
+  colorUndo: {fileID: 0}
 --- !u!1 &2216440857001942561
 GameObject:
   m_ObjectHideFlags: 0

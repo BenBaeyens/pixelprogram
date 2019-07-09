@@ -8,8 +8,7 @@ public class ColorChanger : MonoBehaviour
     [SerializeField] Material defaultMat;
     [SerializeField] public Material effectedMat;
     [SerializeField] SelectorController selectorController;
-
-    [SerializeField] ColorUndo colorUndo;
+    ColorUndo colorUndo;
 
     #region Methods
 
