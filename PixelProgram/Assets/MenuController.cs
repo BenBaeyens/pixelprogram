@@ -6,16 +6,17 @@ public class MenuController : MonoBehaviour
 {
 
     [SerializeField] GameObject menu;
-    public bool isMenuOpen = false;
+    bool isMenuOpen = false;
+    CanvasGenerator canvasGenerator;
     #region Methods
 
     void Start()
     {
-        
+        canvasGenerator = GameObject.Find("Startup").GetComponent<CanvasGenerator>();
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !canvasGenerator.isCanvasOpen){
             if(isMenuOpen)
             {
                 MenuClose();

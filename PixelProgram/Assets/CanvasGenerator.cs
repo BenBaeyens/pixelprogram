@@ -13,6 +13,8 @@ public class CanvasGenerator : MonoBehaviour
     [SerializeField] TMP_InputField xSizeIF;
     [SerializeField] TMP_InputField ySizeIF;
 
+    public bool isCanvasOpen = true;
+
 
 
     #region Methods
@@ -39,7 +41,7 @@ public class CanvasGenerator : MonoBehaviour
             }
             xPos += 6;
         }   
-
+        isCanvasOpen = false;
         gameObject.SetActive(false);
 
     }
