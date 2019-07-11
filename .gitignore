@@ -34,4 +34,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assets/TextMesh Pro/*
+PixelProgram/Assets/TextMesh Pro/*
