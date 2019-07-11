@@ -6,7 +6,7 @@ public class MenuController : MonoBehaviour
 {
 
     [SerializeField] GameObject menu;
-    bool isMenuOpen = false;
+    public bool isMenuOpen = false;
     #region Methods
 
     void Start()
