@@ -394,6 +394,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 2130597770}
+--- !u!1 &291682992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291682994}
+  - component: {fileID: 291682993}
+  m_Layer: 0
+  m_Name: Bucket Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &291682993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291682992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d9c57003e6a52419c62b2c10097b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixels: []
+  colorChanger: {fileID: 701880772}
+  pixelParent: {fileID: 2048449564}
+--- !u!4 &291682994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291682992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 21.06, z: -0.00000023841858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326367388
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +868,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559863767}
   m_CullTransparentMesh: 0
+--- !u!114 &701880772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6204548464179644735, guid: f72e9d41590c8fa479e499a385b3c136,
+    type: 3}
+  m_PrefabInstance: {fileID: 1729182190164659626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5aaa45eb5aa9a1478a3c00a66adf4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958746956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1356,7 @@ GameObject:
   - component: {fileID: 1265131471}
   - component: {fileID: 1265131470}
   m_Layer: 5
-  m_Name: Button
+  m_Name: GenerateButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,6 +1427,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 958746957}
         m_MethodName: GenerateCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 291682993}
+        m_MethodName: PixelArray
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
