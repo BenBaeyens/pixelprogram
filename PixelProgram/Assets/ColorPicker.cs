@@ -30,6 +30,15 @@ public class ColorPicker : MonoBehaviour
             case "Black":
                 colorChanger.effectedMat = colors[2];
                 break;
+            case "Red":
+                colorChanger.effectedMat = colors[3];
+                break;
+            case "Orange":
+                colorChanger.effectedMat = colors[4];
+                break;
+            case "Yellow":
+                colorChanger.effectedMat = colors[5];
+                break;
             default:
                 Debug.LogError("Error: Incorrect color argument");
                 break;
