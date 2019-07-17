@@ -15,19 +15,32 @@ public class CanvasGenerator : MonoBehaviour
 
     public bool isCanvasOpen = true;
 
+    int xSize;
+    int ySize;
+
 
 
     #region Methods
 
     private void Start() {
-        xSizeIF.text = "10";
-        ySizeIF.text = "10";
+        if(PlayerPrefs.GetInt("DefaultSizeX") != 0 && PlayerPrefs.GetInt("DefaultSizeY") != 0){
+        xSizeIF.text = PlayerPrefs.GetInt("DefaultSizeX").ToString();
+        ySizeIF.text = PlayerPrefs.GetInt("DefaultSizeY").ToString();
+        }else{
+            xSizeIF.text = "10";
+            ySizeIF.text = "10";
+            }
     }
     public void GenerateCanvas(){
         Debug.Log(xSizeIF.text + " x " + ySizeIF.text);
-        int xSize = int.Parse(xSizeIF.text);
-        int ySize = int.Parse(ySizeIF.text);
-
+        if(xSizeIF.text != "0")
+            xSize = int.Parse(xSizeIF.text);
+        else
+            xSize = 1;
+        if(ySizeIF.text != "0")
+            ySize = int.Parse(ySizeIF.text);
+        else 
+            ySize = 1;
         float xPos = 0;
         float yPos = 0;
 
