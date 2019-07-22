@@ -6,7 +6,10 @@ public class MenuController : MonoBehaviour
 {
 
     [SerializeField] GameObject menu;
+    [SerializeField] GameObject settings;
     bool isMenuOpen = false;
+    bool isSettingsOpen = false;
+
     CanvasGenerator canvasGenerator;
     #region Methods
 
@@ -16,7 +19,7 @@ public class MenuController : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape) && !canvasGenerator.isCanvasOpen){
+        if(Input.GetKeyDown(KeyCode.Escape) && !canvasGenerator.isCanvasOpen && !isSettingsOpen){
             if(isMenuOpen)
             {
                 MenuClose();
@@ -25,6 +28,16 @@ public class MenuController : MonoBehaviour
             else if (!isMenuOpen)
             {
                 MenuOpen();
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.S) && !isMenuOpen && !canvasGenerator.isCanvasOpen){
+            if(isSettingsOpen){
+                isSettingsOpen = false;
+                settings.gameObject.SetActive(false);
+            }else{
+                isSettingsOpen = true;
+                settings.gameObject.SetActive(true);
             }
         }
     }

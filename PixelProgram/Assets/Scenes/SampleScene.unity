@@ -601,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 2130597770}
+  settings: {fileID: 482732606}
 --- !u!114 &291682993 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3204235217817181169, guid: 5996e8b7d6318d54f8c3dd21f3e26b47,
