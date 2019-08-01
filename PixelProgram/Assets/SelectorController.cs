@@ -37,7 +37,7 @@ public class SelectorController : MonoBehaviour
     }
 
     public void SecondPixelRemove(){
-        Destroy(pixelParent.transform.GetChild(1).gameObject);
+        Destroy(bucketFill.GetComponent<BucketFill>().pixels[1].gameObject);
         bucketFill.GetComponent<BucketFill>().pixels.RemoveAt(1);
     }
 
