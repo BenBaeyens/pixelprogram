@@ -10,6 +10,8 @@ public class SelectorController : MonoBehaviour
     [SerializeField] GameObject collisionDetection;
     public GameObject floorObject;
 
+    [SerializeField] GameObject bucketFill;
+
     [SerializeField] GameObject pixelParent;
 
     Vector3 currentPos;
@@ -36,6 +38,7 @@ public class SelectorController : MonoBehaviour
 
     public void SecondPixelRemove(){
         Destroy(pixelParent.transform.GetChild(1).gameObject);
+        bucketFill.GetComponent<BucketFill>().pixels.RemoveAt(1);
     }
 
     private void MoveDown()
