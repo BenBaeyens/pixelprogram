@@ -329,7 +329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpDistance: 6
+  collisionDetection: {fileID: 3559942300920613910}
   floorObject: {fileID: 0}
+  pixelParent: {fileID: 0}
 --- !u!114 &6204548464179644735
 MonoBehaviour:
   m_ObjectHideFlags: 0
