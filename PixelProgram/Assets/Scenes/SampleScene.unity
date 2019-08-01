@@ -869,8 +869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d4c2ba1188686488c021099b1638b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xCoord: {fileID: 0}
-  yCoord: {fileID: 0}
+  xCoord: {fileID: 964585864}
+  yCoord: {fileID: 1892630030}
 --- !u!1 &557224755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,8 +2523,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.28
-  m_fontSizeBase: 18.28
+  m_fontSize: 13.04
+  m_fontSizeBase: 13.04
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2681,8 +2681,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.28
-  m_fontSizeBase: 18.28
+  m_fontSize: 13.04
+  m_fontSizeBase: 13.04
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
