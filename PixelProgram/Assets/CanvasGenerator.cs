@@ -55,7 +55,9 @@ public class CanvasGenerator : MonoBehaviour
             xPos += 6;
         }   
         isCanvasOpen = false;
+        Destroy(pixelParent.transform.GetChild(1));
         gameObject.SetActive(false);
+
 
     }
 

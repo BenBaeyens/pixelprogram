@@ -7,8 +7,10 @@ public class SelectorController : MonoBehaviour
 
     [SerializeField] float jumpDistance;
 
-    GameObject collisionDetection;
+    [SerializeField] GameObject collisionDetection;
     public GameObject floorObject;
+
+    [SerializeField] GameObject pixelParent;
 
     Vector3 currentPos;
 
@@ -22,6 +24,7 @@ public class SelectorController : MonoBehaviour
         currentPos = transform.position;
     }
 
+
     private void Update()
     {
         MoveRight();
@@ -31,6 +34,9 @@ public class SelectorController : MonoBehaviour
 
     }
 
+    public void SecondPixelRemove(){
+        Destroy(pixelParent.transform.GetChild(1).gameObject);
+    }
 
     private void MoveDown()
     {
@@ -38,9 +44,10 @@ public class SelectorController : MonoBehaviour
         {
             transform.position = currentPos + new Vector3(0, 0, -jumpDistance);
             currentPos = transform.position;
-            
+
         }
-    } 
+    }
+
     private void MoveUp()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && CollisionObjectDetect("Up"))
