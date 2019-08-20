@@ -23,13 +23,26 @@ public class ColorChanger : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)){
             selectorController.floorObject.GetComponent<Renderer>().material = effectedMat; 
             colorUndo = selectorController.floorObject.GetComponent<ColorUndo>();
-            colorUndo.AddColor();
+            colorUndo.AddColor(0);
         }   
 
         if(Input.GetKeyDown(KeyCode.U)){
             if(pixelHistory.Count >= 1){
+                if(pixelHistory[pixelHistory.Count -1].name == "Bucket Fill"){
+                    for (int i = 1; i < pixelHistory.Count; i++)
+                    {   
+                        if(pixelHistory[i].name == "Bucket Fill"){
+                            Debug.Log(i);
+                            pixelHistory.RemoveRange(pixelHistory.Count - i - 1, pixelHistory.Count);
+                        }
+                        pixelHistory[i].GetComponent<ColorUndo>().UndoColor();
+                        
+                    }
+
+                }else{
                 pixelHistory[pixelHistory.Count - 1].GetComponent<ColorUndo>().UndoColor();
                 pixelHistory.RemoveAt(pixelHistory.Count - 1);
+                }
             }
         }
     }
