@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ColorChanger : MonoBehaviour
 {
 
@@ -26,7 +27,8 @@ public class ColorChanger : MonoBehaviour
         }   
 
         if(Input.GetKeyDown(KeyCode.U)){
-            if(pixelHistory.Count >= 2){
+            if(pixelHistory.Count >= 1){
+                Debug.Log("yeet");
                 pixelHistory[pixelHistory.Count - 1].GetComponent<ColorUndo>().UndoColor();
                 pixelHistory.RemoveAt(pixelHistory.Count - 1);
             }
