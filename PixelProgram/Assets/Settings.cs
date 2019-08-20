@@ -20,17 +20,17 @@ public class Settings : MonoBehaviour
     }
 
     public void ChangeDefaultSize(){
-        if(xCoord.text != null){
+        if(xCoord.text != null && xCoord.text != ""){
             if(int.Parse(xCoord.text) <= 0)
                 xCoord.text = "1";
-                }
-        if(yCoord.text != null){
+            PlayerPrefs.SetInt("DefaultSizeX", int.Parse(xCoord.text));
+        }
+        if(yCoord.text != null && yCoord.text != ""){
             if(int.Parse(yCoord.text) <= 0)
                 yCoord.text = "1";
             
-            }
-        PlayerPrefs.SetInt("DefaultSizeX", int.Parse(xCoord.text));
-        PlayerPrefs.SetInt("DefaultSizeY", int.Parse(yCoord.text));
+            PlayerPrefs.SetInt("DefaultSizeY", int.Parse(yCoord.text));
+        }
     }
 
     #endregion

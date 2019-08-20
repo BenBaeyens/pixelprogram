@@ -28,7 +28,6 @@ public class ColorChanger : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.U)){
             if(pixelHistory.Count >= 1){
-                Debug.Log("yeet");
                 pixelHistory[pixelHistory.Count - 1].GetComponent<ColorUndo>().UndoColor();
                 pixelHistory.RemoveAt(pixelHistory.Count - 1);
             }
